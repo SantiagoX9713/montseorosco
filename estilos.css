@@ -1,5 +1,18 @@
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+h2{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+h3{
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
 }
 header {
     background-color: #FF6A6F;
@@ -12,7 +25,7 @@ header {
 }
 .container {
     max-width: 1000px;
-    flex: 1;
+    flex:1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -48,4 +61,13 @@ header a {
     align-items: center;
     height: inherit;
     padding: 0 15px;
+}
+.articulos{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.articulo{
+
 }

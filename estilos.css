@@ -141,9 +141,12 @@ body h2{
     .logo{
         text-align: center;
     }
+    figure img {
+        margin-top: 10px;
+    }
     .header {
         display: block;
-        height: auto;
+        height: 90px;
     }
     .header ol {
         display: block;
@@ -153,7 +156,7 @@ body h2{
     }
     .header a {
         justify-content: center;
-        height: 40px;
+        height: inherit;
         font-size: 2em;
         margin-bottom: 0.5em;
     }

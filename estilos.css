@@ -1,4 +1,49 @@
-body {
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?lylkzd');
+    src:  url('../fonts/icomoon.eot?lylkzd#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?lylkzd') format('truetype'),
+      url('../fonts/icomoon.woff?lylkzd') format('woff'),
+      url('../fonts/icomoon.svg?lylkzd#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e9bd";
+  }
+
+  .burger-button{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #ff6a6f5d;
+      display: none;
+      line-height: 40px;
+      text-align: center;
+      color: white;
+      position: fixed;
+      left: 7px;
+      top: 7px;
+      z-index: 4;
+  }
+  body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
@@ -41,10 +86,6 @@ ol,ul {
 figure {
     margin: 0;
 }
-header a {
-    color: white;
-    text-decoration: none;
-}
 .menu {
     height: inherit;
 }
@@ -57,10 +98,15 @@ header ol li {
     font-weight: 250;
 }
 header a {
+    color: white;
+    text-decoration: none;
     display:flex;
     align-items: center;
     height: inherit;
     padding: 0 15px;
+}
+body h2{
+    padding: 20px;
 }
 .articulos{
     display:flex;
@@ -70,4 +116,58 @@ header a {
 }
 .articulo{
 
+}
+
+@media screen and (max-width:767px){
+    .burger-button{
+        display: block;   
+    }
+    .menu{
+        position: fixed;
+        background-color: #ff6a6f5d;
+        z-index: 3;
+        top: 0;
+        bottom: 0;
+        left: -100vw;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    }
+    .menu.is-active{
+        left: 0;
+    }
+    .logo{
+        text-align: center;
+    }
+    .header {
+        display: block;
+        height: auto;
+    }
+    .header ol {
+        display: block;
+    }
+    .header ol li {
+        height: 50px;
+    }
+    .header a {
+        justify-content: center;
+        height: 40px;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    .container {
+        max-width: 100%;
+        flex:1;
+        margin: 0 auto;
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        flex-wrap: inherit;
+    }
+    .articulo{
+        margin: 15px,0;
+    }
 }

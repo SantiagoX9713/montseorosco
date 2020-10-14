@@ -33,7 +33,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: #ff6a6f5d;
+      background-color: #ff6a6f;
       display: none;
       line-height: 40px;
       text-align: center;
@@ -119,12 +119,17 @@ body h2{
 }
 
 @media screen and (max-width:767px){
+    
+/*    #articulos{
+        padding-top: 80px;
+    }
+*/
     .burger-button{
         display: block;   
     }
     .menu{
         position: fixed;
-        background-color: #ff6a6f5d;
+        background-color: #ff6a6f9d;
         z-index: 3;
         top: 0;
         bottom: 0;
@@ -145,8 +150,11 @@ body h2{
         margin-top: 10px;
     }
     .header {
+       /* position: fixed;*/
         display: block;
-        height: 90px;
+        height: inherit;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.705);
     }
     .header ol {
         display: block;
